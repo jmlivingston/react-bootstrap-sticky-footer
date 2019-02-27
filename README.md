@@ -1,3 +1,61 @@
+# react-bootstrap-sticky-footer
+
+A simple example that shows how to create a sticky footer with React and Bootstrap. This examples is based on create-react-app, but this can be used in any React project.
+
+## Instructions in 4 Simple Steps
+
+> See commit with "Add sticky footer" as the message for full changeset.
+
+1. Add Bootstrap
+
+```bash
+npm install bootstrap
+```
+
+2. Reference bootstrap. (Quick and dirty way is to add reference in index.js.)
+
+```javascript
+import 'bootstrap/dist/css/bootstrap.min.css'
+```
+
+3. Update html, body, and root div classes in public/index.html
+
+```html
+<!-- h-100 -->
+<html lang="en" class="h-100">
+  ...
+  <!-- h-100 -->
+  <body class="h-100">
+    ...
+    <!-- d-flex flex-column h-100 -->
+    <div id="root" class="d-flex flex-column h-100 mt-4"></div>
+  </body>
+</html>
+```
+
+4. Add boilerplate to App.js. This is copied directly from Bootstrap's example [here](https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/) with only minor changes\*. The important thing is to ensure the header, main, and footer tags are wrapped in a React Fragment. I'm using the short syntax: `<></>`.
+
+---
+
+\* Minor Changes to Bootstrap Example
+
+- Converted HTML to JSX. (This is the only critical change.)
+- Added `mt-4` class in main div for top padding
+- Tweaked footer classes with `bg-dark` and `text-white` to make it more visible
+- Change `href='#'` references to `href='/'` to get around lint rules.
+
+---
+
+## Screenshot
+
+![Screenshot](localhost_3000_.png)
+
+---
+
+---
+
+## create-react-app Documentation
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
