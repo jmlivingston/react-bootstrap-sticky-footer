@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 
 const App = () => {
   return (
@@ -47,7 +48,7 @@ const App = () => {
         </nav>
       </header>
       {/* Begin page content */}
-      <main role='main' className='flex-shrink-0 mt-4'>
+      <main role='main' className='flex-shrink-0'>
         <div className='container'>
           <h1 className='mt-5'>Sticky footer with fixed navbar</h1>
           <p className='lead'>
