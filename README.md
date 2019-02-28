@@ -2,9 +2,9 @@
 
 A simple example that shows how to create a sticky footer with React and Bootstrap. This examples is based on create-react-app, but this can be used in any React project.
 
-## Instructions in 4 Simple Steps
+## Instructions
 
-> See commit with "Add sticky footer" as the message for full changeset.
+> See commits with "Add sticky footer" as the message for full changesets.
 
 1. Add Bootstrap
 
@@ -28,21 +28,34 @@ import 'bootstrap/dist/css/bootstrap.min.css'
   <body class="h-100">
     ...
     <!-- d-flex flex-column h-100 -->
-    <div id="root" class="d-flex flex-column h-100 mt-4"></div>
+    <div id="root" class="d-flex flex-column h-100"></div>
   </body>
 </html>
 ```
 
-4. Add boilerplate to App.js. This is copied directly from Bootstrap's example [here](https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/) with only minor changes\*. The important thing is to ensure the header, main, and footer tags are wrapped in a React Fragment. I'm using the short syntax: `<></>`.
+4. Create App.css and add the following
+
+```css
+main > .container {
+  padding: 60px 15px 0;
+}
+```
+
+5. Add reference to App.css in App.js
+
+```javascript
+import './App.css'
+```
+
+6. Add boilerplate to App.js. This is copied directly from Bootstrap's example [here](https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/) with only minor changes\*. The important thing is to ensure the header, main, and footer tags are wrapped in a React Fragment. I'm using the short syntax: `<></>`.
 
 ---
 
 \* Minor Changes to Bootstrap Example
 
 - Converted HTML to JSX. (This is the only critical change.)
-- Added `mt-4` class in main div for top padding
 - Tweaked footer classes with `bg-dark` and `text-white` to make it more visible
-- Change `href='#'` references to `href='/'` to get around lint rules.
+- Change `href='#'` references to `href='/'` to fix lint rules.
 
 ---
 
